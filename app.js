@@ -6,7 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var db = require('mongoose');
 
-db.connect('mongodb://localhost/testing');
+db.Promise = global.Promise
+
+db.connect('mongodb://localhost/testing', { useMongoClient: true });
 
 // import routes
 var index = require('./routes/index');
