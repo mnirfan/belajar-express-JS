@@ -10,4 +10,8 @@ router.post('/', filmController.create)
 
 router.delete('/:filmId', filmController.destroy)
 
+router.put('/:filmId', filmController.update)
+
+router.put('/:filmId/refference', filmController.actorRefference)
+
 module.exports = router

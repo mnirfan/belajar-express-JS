@@ -9,6 +9,10 @@ var filmSchema = new Schema({
     },
     year: Number,
     released: Boolean,
+    actors: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Actor'
+    }]
 },{
     timestamps: true
 })
